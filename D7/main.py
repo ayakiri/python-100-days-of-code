@@ -1,6 +1,5 @@
 import random
-
-list_of_words = ["intelligence", "notice", "art", "trial", "sweet", "grace"]
+import word_list
 
 stages = ['''
   +---+
@@ -60,7 +59,7 @@ stages = ['''
 ''']
 
 # pick a random word
-word = random.choice(list_of_words)
+word = random.choice(word_list.word_list)
 
 # prepare list for guesses
 display = []
