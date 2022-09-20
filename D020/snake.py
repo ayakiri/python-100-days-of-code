@@ -29,6 +29,13 @@ class Snake:
             self.snake_body[body_segment_num].goto(self.snake_body[body_segment_num - 1].pos())
         self.head.forward(MOVE_RANGE)
 
+    def reset(self):
+        for segment in self.snake_body:
+            segment.goto(1100, 1100)
+        self.snake_body.clear()
+        self.create_snake()
+        self.head = self.snake_body[0]
+
     def up(self):
         if self.head.heading() != 270:
             self.head.setheading(90)
